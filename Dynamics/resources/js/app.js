@@ -1,6 +1,6 @@
 require('./bootstrap');
-
 require('alpinejs');
+require('jquery');
 
 var countreponseid = 0;
   $( "#addreponse" ).on( "click", function() {

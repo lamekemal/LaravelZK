@@ -17,10 +17,12 @@ class CreateQuestionnairesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('title');
-            $table->string('purpose');
+            $table->string('description');
             $table->string('price');
             $table->string('status');
             $table->string('validator');
+            $table->string('images');
+            $table->string('code');
             $table->timestamps();
         });
     }

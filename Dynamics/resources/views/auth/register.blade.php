@@ -1,59 +1,153 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="fr">
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inscription ZK-Consulting</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/styles/css/themes/lite-purple.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+<body>
+    <div class="auth-layout-wrap" style="background-image: url({{ asset('assets/images/photo-wide-4.jpg') }})">
+        <div class="auth-content">
+            <div class="card o-hidden">
+                <div class="row">
+                    <div class="col-md-6 text-center "
+                        style="background-size: cover;background-image: url({{ asset('assets/images/photo-long-3.jpg') }})">
+                        <div class="pl-3 auth-right">
+                            <div class="auth-logo text-center mt-4">
+                                <img src="{{ asset('assets/images/logo.png') }}" alt="">
+                            </div>
+                            <div class="flex-grow-1"></div>
+                            <div class="w-100 mb-4">
+                                <a class="btn btn-outline-primary btn-outline-email btn-block btn-icon-text btn-rounded"
+                                    href="{{ route('login') }}">
+                                    <i class=" i-Mail-with-At-Sign"></i> Connexion avec E-mail
+                                </a>
+                                <!--a
+                                        class="btn btn-outline-primary btn-outline-google btn-block btn-icon-text btn-rounded">
+                                        <i class="i-Google-Plus"></i> Sign in with Google
+                                    </a>
+                                    <a
+                                        class="btn btn-outline-primary btn-outline-facebook btn-block btn-icon-text btn-rounded">
+                                        <i class="i-Facebook-2"></i> Sign in with Facebook
+                                    </a-->
+                            </div>
+                            <div class="flex-grow-1"></div>
+                        </div>
+                    </div>
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+                    <div class="col-md-6">
+                        <div class="p-4">
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                            <h1 class="mb-3 text-18">Enregistrement</h1>
+                            <form method="POST" action="{{ route('register') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="username">Votre nom complet</label>
+                                    <input id="name" type="text"
+                                        class="form-control-rounded form-control @error('name') is-invalid @enderror"
+                                        name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="email"
+                                        class="form-control-rounded form-control @error('email') is-invalid @enderror"
+                                        name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Numero de téléphone</label>
+                                    <input id="phone" type="tel"
+                                        class="form-control-rounded form-control @error('phone') is-invalid @enderror"
+                                        name="phone" value="" required autocomplete="phone">
+                                    <div class="autophone" style="display: none;"></div>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Mot de passe</label>
+                                    <input id="password" type="password"
+                                        class="form-control-rounded form-control @error('password') is-invalid @enderror"
+                                        name="password" required autocomplete="new-password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="repassword">Mot de passe une nouvelle fois</label>
+                                    <input id="password-confirm" type="password"
+                                        class="form-control-rounded form-control" name="password_confirmation" required
+                                        autocomplete="new-password">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block btn-rounded mt-3">Inscription</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+    <script src="{{ asset('assets/js/common-bundle-script.js') }}"></script>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+</body>
+<script>
+    const info = document.querySelector(".autophone");
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+    const selectElement = document.querySelector('#phone');
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
+    selectElement.addEventListener('change', (event) => {
+        const phoneNumber = phoneInput.getNumber();
+        info.style.display = "";
+        info.innerHTML = `<input id="intphone" type="tel" name="intphone"
+                                        class="hidden" value="${phoneNumber}" hidden>`;
+    });
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+    function getIp(callback) {
+        fetch('https://ipinfo.io/json?token=be7259704977a9', {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then((resp) => resp.json())
+            .catch(() => {
+                return {
+                    country: 'bj',
+                };
+            })
+            .then((resp) => callback(resp.country));
+    }
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "auto",
+        geoIpLookup: getIp,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+</html>

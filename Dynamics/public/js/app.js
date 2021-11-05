@@ -332,7 +332,7 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");\n\n__webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/alpine.js\");\n\nvar countreponseid = 0;\n$(\"#addreponse\").on(\"click\", function () {\n  $('#reponsemaster').append('<div class=\"form-group\"><label for=\"reponse\">Réponse suggérer</label><input id=\"reponse' + countreponseid + '\" aria-placeholder=\"reponseHelp\" placeholder=\"Reponse aux choix\" name=\"reponses[][reponse]\"type=\"text\" class=\"form-control\" aria-describedby=\"reponseHelp\"></div>');\n  countreponseid++;\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzLmpzIiwibWFwcGluZ3MiOiJBQUFBQSxtQkFBTyxDQUFDLGdEQUFELENBQVA7O0FBRUFBLG1CQUFPLENBQUMsd0RBQUQsQ0FBUDs7QUFFQSxJQUFJQyxjQUFjLEdBQUcsQ0FBckI7QUFDRUMsQ0FBQyxDQUFFLGFBQUYsQ0FBRCxDQUFtQkMsRUFBbkIsQ0FBdUIsT0FBdkIsRUFBZ0MsWUFBVztBQUN6Q0QsRUFBQUEsQ0FBQyxDQUFDLGdCQUFELENBQUQsQ0FBb0JFLE1BQXBCLENBQ0ksNEZBQTBGSCxjQUExRixHQUF5RyxtS0FEN0c7QUFFTUEsRUFBQUEsY0FBYztBQUNyQixDQUpEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL2pzL2FwcC5qcz82ZDQwIl0sInNvdXJjZXNDb250ZW50IjpbInJlcXVpcmUoJy4vYm9vdHN0cmFwJyk7XG5cbnJlcXVpcmUoJ2FscGluZWpzJyk7XG5cbnZhciBjb3VudHJlcG9uc2VpZCA9IDA7XG4gICQoIFwiI2FkZHJlcG9uc2VcIiApLm9uKCBcImNsaWNrXCIsIGZ1bmN0aW9uKCkge1xuICAgICQoJyNyZXBvbnNlbWFzdGVyJykuYXBwZW5kKFxuICAgICAgICAnPGRpdiBjbGFzcz1cImZvcm0tZ3JvdXBcIj48bGFiZWwgZm9yPVwicmVwb25zZVwiPlLDqXBvbnNlIHN1Z2fDqXJlcjwvbGFiZWw+PGlucHV0IGlkPVwicmVwb25zZScrY291bnRyZXBvbnNlaWQrJ1wiIGFyaWEtcGxhY2Vob2xkZXI9XCJyZXBvbnNlSGVscFwiIHBsYWNlaG9sZGVyPVwiUmVwb25zZSBhdXggY2hvaXhcIiBuYW1lPVwicmVwb25zZXNbXVtyZXBvbnNlXVwidHlwZT1cInRleHRcIiBjbGFzcz1cImZvcm0tY29udHJvbFwiIGFyaWEtZGVzY3JpYmVkYnk9XCJyZXBvbnNlSGVscFwiPjwvZGl2PidcbiAgICAgICAgKTtjb3VudHJlcG9uc2VpZCsrO1xuICB9KTtcbiJdLCJuYW1lcyI6WyJyZXF1aXJlIiwiY291bnRyZXBvbnNlaWQiLCIkIiwib24iLCJhcHBlbmQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
+eval("__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");\n\n__webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/alpine.js\");\n\n__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar countreponseid = 0;\n$(\"#addreponse\").on(\"click\", function () {\n  $('#reponsemaster').append('<div class=\"form-group\"><label for=\"reponse\">Réponse suggérer</label><input id=\"reponse' + countreponseid + '\" aria-placeholder=\"reponseHelp\" placeholder=\"Reponse aux choix\" name=\"reponses[][reponse]\"type=\"text\" class=\"form-control\" aria-describedby=\"reponseHelp\"></div>');\n  countreponseid++;\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzLmpzIiwibWFwcGluZ3MiOiJBQUFBQSxtQkFBTyxDQUFDLGdEQUFELENBQVA7O0FBQ0FBLG1CQUFPLENBQUMsd0RBQUQsQ0FBUDs7QUFDQUEsbUJBQU8sQ0FBQyxvREFBRCxDQUFQOztBQUVBLElBQUlDLGNBQWMsR0FBRyxDQUFyQjtBQUNFQyxDQUFDLENBQUUsYUFBRixDQUFELENBQW1CQyxFQUFuQixDQUF1QixPQUF2QixFQUFnQyxZQUFXO0FBQ3pDRCxFQUFBQSxDQUFDLENBQUMsZ0JBQUQsQ0FBRCxDQUFvQkUsTUFBcEIsQ0FDSSw0RkFBMEZILGNBQTFGLEdBQXlHLG1LQUQ3RztBQUVNQSxFQUFBQSxjQUFjO0FBQ3JCLENBSkQiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYXBwLmpzPzZkNDAiXSwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi9ib290c3RyYXAnKTtcbnJlcXVpcmUoJ2FscGluZWpzJyk7XG5yZXF1aXJlKCdqcXVlcnknKTtcblxudmFyIGNvdW50cmVwb25zZWlkID0gMDtcbiAgJCggXCIjYWRkcmVwb25zZVwiICkub24oIFwiY2xpY2tcIiwgZnVuY3Rpb24oKSB7XG4gICAgJCgnI3JlcG9uc2VtYXN0ZXInKS5hcHBlbmQoXG4gICAgICAgICc8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPjxsYWJlbCBmb3I9XCJyZXBvbnNlXCI+UsOpcG9uc2Ugc3VnZ8OpcmVyPC9sYWJlbD48aW5wdXQgaWQ9XCJyZXBvbnNlJytjb3VudHJlcG9uc2VpZCsnXCIgYXJpYS1wbGFjZWhvbGRlcj1cInJlcG9uc2VIZWxwXCIgcGxhY2Vob2xkZXI9XCJSZXBvbnNlIGF1eCBjaG9peFwiIG5hbWU9XCJyZXBvbnNlc1tdW3JlcG9uc2VdXCJ0eXBlPVwidGV4dFwiIGNsYXNzPVwiZm9ybS1jb250cm9sXCIgYXJpYS1kZXNjcmliZWRieT1cInJlcG9uc2VIZWxwXCI+PC9kaXY+J1xuICAgICAgICApO2NvdW50cmVwb25zZWlkKys7XG4gIH0pO1xuIl0sIm5hbWVzIjpbInJlcXVpcmUiLCJjb3VudHJlcG9uc2VpZCIsIiQiLCJvbiIsImFwcGVuZCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
 
 /***/ }),
 
@@ -387,6 +387,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./resources/gull/assets/styles/sass/themes/lite-purple.scss":
+/*!*******************************************************************!*\
+  !*** ./resources/gull/assets/styles/sass/themes/lite-purple.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvZ3VsbC9hc3NldHMvc3R5bGVzL3Nhc3MvdGhlbWVzL2xpdGUtcHVycGxlLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL2d1bGwvYXNzZXRzL3N0eWxlcy9zYXNzL3RoZW1lcy9saXRlLXB1cnBsZS5zY3NzPzgwY2UiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/gull/assets/styles/sass/themes/lite-purple.scss\n");
+
+/***/ }),
+
+/***/ "./resources/gull/assets/styles/sass/themes/lite-blue.scss":
+/*!*****************************************************************!*\
+  !*** ./resources/gull/assets/styles/sass/themes/lite-blue.scss ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvZ3VsbC9hc3NldHMvc3R5bGVzL3Nhc3MvdGhlbWVzL2xpdGUtYmx1ZS5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9ndWxsL2Fzc2V0cy9zdHlsZXMvc2Fzcy90aGVtZXMvbGl0ZS1ibHVlLnNjc3M/MGM3ZiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/gull/assets/styles/sass/themes/lite-blue.scss\n");
+
+/***/ }),
+
+/***/ "./resources/gull/assets/styles/sass/themes/dark-purple.scss":
+/*!*******************************************************************!*\
+  !*** ./resources/gull/assets/styles/sass/themes/dark-purple.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvZ3VsbC9hc3NldHMvc3R5bGVzL3Nhc3MvdGhlbWVzL2RhcmstcHVycGxlLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL2d1bGwvYXNzZXRzL3N0eWxlcy9zYXNzL3RoZW1lcy9kYXJrLXB1cnBsZS5zY3NzPzc2NjAiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/gull/assets/styles/sass/themes/dark-purple.scss\n");
+
+/***/ }),
+
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -415,7 +448,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\Projects\\\\LaravelZK\\\\zkconsultingBJ"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"D:\\\\Projects\\\\LaravelZK\\\\zkconsultingBJ","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\Projects\\\\LaravelZK\\\\Dynamics"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"D:\\\\Projects\\\\LaravelZK\\\\Dynamics","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
@@ -542,7 +575,10 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\Projects\\\\Larave
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
+/******/ 			"css/app": 0,
+/******/ 			"assets/styles/css/themes/dark-purple.min": 0,
+/******/ 			"assets/styles/css/themes/lite-blue.min": 0,
+/******/ 			"assets/styles/css/themes/lite-purple.min": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -592,8 +628,11 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\Projects\\\\Larave
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","assets/styles/css/themes/dark-purple.min","assets/styles/css/themes/lite-blue.min","assets/styles/css/themes/lite-purple.min"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","assets/styles/css/themes/dark-purple.min","assets/styles/css/themes/lite-blue.min","assets/styles/css/themes/lite-purple.min"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","assets/styles/css/themes/dark-purple.min","assets/styles/css/themes/lite-blue.min","assets/styles/css/themes/lite-purple.min"], () => (__webpack_require__("./resources/gull/assets/styles/sass/themes/lite-purple.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","assets/styles/css/themes/dark-purple.min","assets/styles/css/themes/lite-blue.min","assets/styles/css/themes/lite-purple.min"], () => (__webpack_require__("./resources/gull/assets/styles/sass/themes/lite-blue.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","assets/styles/css/themes/dark-purple.min","assets/styles/css/themes/lite-blue.min","assets/styles/css/themes/lite-purple.min"], () => (__webpack_require__("./resources/gull/assets/styles/sass/themes/dark-purple.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

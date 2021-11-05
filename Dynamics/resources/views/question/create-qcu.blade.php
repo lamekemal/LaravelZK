@@ -1,21 +1,31 @@
-@extends('layouts.appx')
+@extends('layouts.masterx')
 @section('title', 'ZK Consulting')
 
-@section('content')
+@section('main-content')
+    <div class="breadcrumb">
+        <h1>{{ $questionnaire->title }}</h1>
+    </div>
 
-    <div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">Créé une nouvelle question QCU </div>
-                        <div class="card-body">
-                            <form action="/Questionnaires/{{ $questionnaire -> id }}/questions-qcu" method="post">
-                                @csrf
+    <div class="separator-breadcrumb border-top"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card o-hidden mb-4">
+                <div class="card-header d-flex align-items-center border-0">
+                    <h3 class="w-50 float-left card-title m-0">Ajouter une nouvelle question QCUS </h3>
+                    <div class="dropdown dropleft text-right w-50 float-right">
+                        <a href="/Questionnaires/{{ $questionnaire->code }}/" class="btn btn-outline-danger"
+                            type="button">Annuler</a>
+                    </div>
+                </div>
+
+                <div class="">
+                    <form action="/Questionnaires/{{ $questionnaire->code }}/questions-qcu" method="post">
+                        @csrf
+                        <div class="p-4">
                                 <div class="form-group">
-                                    <label for="question">Question QCU </label>
-                                    <input id="question[question]" aria-placeholder="questionHelp" placeholder="Contenu de la question"
-                                    name="question"type="text" class="form-control" aria-describedby="questionHelp">
+                                    <label class="form-label" for="question">Question QCU </label>
+                                    <input id="question" aria-placeholder="questionHelp" placeholder="Contenu de la question"
+                                    name="question[question]"type="text" class="form-control" aria-describedby="questionHelp">
                                     <small id="questionHelp" class="form-text text-muted">Entrer une question à réponse unique choisie.</small>
                                     @error('question.question')
                                         <small class="test-danger">{{ $message }}</small>
@@ -26,19 +36,25 @@
                                 <div class="form-group">
                                     <fieldset>
                                         <legend> Choix disponible</legend>
-                                        <small id="choiceHelp" class="form-text text-muted">Entrez les réposnse choix disponible</small>
+                                        <small  id="choiceHelp" class="form-text text-muted">Entrez les réposnse choix disponible</small>
                                         <a class="btn btn-outline-primary" id="addreponse">Ajouter une suggestion</a>
                                         <div id="reponsemaster"></div>
                                     </fieldset>
                                 </div>
-                                <button type="submit" class="btn btn-warning">Créer le Questionnaire</button>
-                            </form>
-                        </div>
+                                <input class="hidden" id="question_type" name="question_type" value="1" type="number" hidden>
+
+                            </div>
+                            <button type="submit" class="btn btn-info w-100">Ajouter la question</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    @endsection
 
-@endsection
+    @section('page-js')
+        <script src="{{ asset('assets/js/vendor/echarts.min.js') }}"></script>
+        <script src="{{ asset('assets/js/es5/echart.options.min.js') }}"></script>
+        <script src="{{ asset('assets/js/es5/dashboard.v1.script.js') }}"></script>
+    @endsection

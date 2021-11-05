@@ -4,6 +4,7 @@
         @include('layouts.include')
     </head>
     <body>
+
         <div>
             @yield('preloader')
         </div>
