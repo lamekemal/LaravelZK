@@ -17,7 +17,7 @@ class CreateQuestionnairesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('price');
             $table->string('status');
             $table->string('validator');

@@ -58,7 +58,7 @@ class QuestionnaireController extends Controller
                     'price' => $request->input('price'),
                     'status' => "0",
                     'validator' => "0",
-                    'images' => "npne",
+                    'images' => "none",
                     'code' => $this->generateRandomString(5)
                 ]
             );

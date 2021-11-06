@@ -68,7 +68,8 @@
           <li><a href="/#work">Nos formations</a></li>
           <li><a href="/#why-us">Pourquoi nous?</a></li>
           <li><a href="/#footer">Contactez-nous</a></li>
-          <li ><a style="color: #0a9735;" href="{{asset('landing/ccd/index.php')}}">Connexion</a></li>
+          <!--li ><a style="color: #0a9735;" href="{{asset('landing/ccd/index.php')}}">Connexion</a></li-->
+          <li ><a style="color: #0a9735;" href="/Dashboard">Connexion</a></li>
         </ul>
       </nav><!-- .main-nav -->
 

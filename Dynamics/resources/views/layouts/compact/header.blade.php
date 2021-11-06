@@ -20,7 +20,7 @@
             <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i>
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"
-                class="fas fa-sign-out-alt header-icon d-none d-sm-inline-block"></a>
+                class="lni lni-enter header-icon d-none d-sm-inline-block"></a>
                 <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
