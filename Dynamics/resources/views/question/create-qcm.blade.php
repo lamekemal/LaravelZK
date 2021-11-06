@@ -46,6 +46,7 @@
                                 </fieldset>
                             </div>
                             <input class="hidden" id="question_type" name="question_type" value="2" type="number" hidden>
+
                         </div>
                         <button type="submit" class="btn btn-info w-100">Ajouter la question</button>
                     </form>

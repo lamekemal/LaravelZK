@@ -149,6 +149,8 @@ Route::post('/Questionnaires/{code}/questions-qcm', [QuestionController::class, 
 Route::get('/Survey/{code}', [SurveyController::class, 'show']);
 Route::post('/Survey/{code}', [SurveyController::class, 'store']);
 Route::get('/Dashboard', [DashboardController::class, 'index'])->name('compact');
+Route::get('/DashboardQuestionnaire', [DashboardController::class, 'listQuestionnaire']);
+Route::get('/DashboardQuestionnaire/{code}/delete', [DashboardController::class, 'deleteQuestionnaire']);
 
 Auth::routes();
 

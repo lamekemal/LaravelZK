@@ -40,6 +40,7 @@
                                     name="reponse[reponse]" type="text" class="form-control" value=".">
                             </div>
                             <input class="hidden" id="question_type" name="question_type" value="0" type="number" hidden>
+                            <input class="hidden" id="reponse_type" name="reponse[reponse_type]" value="0" type="number" hidden>
                         </div>
                         <button type="submit" class="btn btn-info w-100">Ajouter la question</button>
                     </form>

@@ -17,6 +17,7 @@ class CreateReponsesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('question_id');
             $table->string('reponse');
+            $table->string('reponse_type');
             $table->timestamps();
         });
     }

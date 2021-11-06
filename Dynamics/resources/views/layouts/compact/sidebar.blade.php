@@ -18,7 +18,13 @@
                 </a>
                 <div class="triangle"></div>
             </li>
-
+            <li class="nav-item {{ request()->is('sessions/*') ? 'active' : '' }}" data-item="sessions">
+                <a class="nav-item-hold" href="#">
+                    <i class="nav-icon i-Administrator"></i>
+                    <span class="nav-text">Inscrits</span>
+                </a>
+                <div class="triangle"></div>
+            </li>
         </ul>
     </div>
 
@@ -37,31 +43,38 @@
             </header>
             <ul class="childNav" data-parent="dashboard">
                 <li class="nav-item">
+                    <a href="/Dashboard"
+                        class="{{ Route::currentRouteName()=='dashboard_version_2' ? 'open' : '' }}">
+
+                        <span class="item-name">Acceuil</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Questionnaires/create"
                         class="{{ Route::currentRouteName()=='dashboard_version_2' ? 'open' : '' }}">
-                        <i class="nav-icon i-Add"></i>
+
                         <span class="item-name">Noveau Formulaire</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="{{ Route::currentRouteName()=='dashboard_version_3' ? 'open' : '' }}"
-                        href="{{route('dashboard_version_3')}}">
-                        <i class="nav-icon i-Over-Time"></i>
-                        <span class="item-name">Validation de formulaire</span>
+                        href="/">
+
+                        <span class="item-name">Donnée des formulaires</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="{{ Route::currentRouteName()=='dashboard_version_4' ? 'open' : '' }}"
-                        href="{{route('dashboard_version_4')}}">
-                        <i class="nav-icon i-Clock"></i>
-                        <span class="item-name">Edition de formulaire</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="{{ Route::currentRouteName()=='dashboard_version_4' ? 'open' : '' }}"
-                        href="{{route('dashboard_version_4')}}">
-                        <i class="nav-icon i-Clock"></i>
+                        href="/DashboardQuestionnaire">
+
                         <span class="item-name">Liste des formulaires</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="{{ Route::currentRouteName()=='dashboard_version_4' ? 'open' : '' }}"
+                        href="{{route('dashboard_version_4')}}">
+
+                        <span class="item-name">Validation des paiements</span>
                     </a>
                 </li>
             </ul>

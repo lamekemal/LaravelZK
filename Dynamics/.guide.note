@@ -1,0 +1,25 @@
+liste des formulaire -< information des formulaire, link, delete
+Donnée des formulaires -< information des formulaire, nombre soumission, suspendre l'enquette, activer l'enquette, donnée en csv-json-xls
+
+Validation des paiements -> information sur formulaire : liste des réponse
+                        -< tout payer suivant les numeros de téléphobe, suivant
+                        l'email, suivant une rémunération personaliser
+                        gestionnaire des utilisateurs
+
+
+base de donnée:
+formulaire: Status  -> 0 formulaire incorrecte
+                    -> 1 formulaire actif & formulaire non rémunéré
+                    -> 2 formulaire desactiver
+                    -> 3 formulaire actif & aucun payement
+                    -> 4 formulaire actif & paiement partiel
+                    -> 5 formulaire desactiver & aucun paiement
+
+les question conditionnelle sont des question classic qui on des question fils ou children/parent questions
+
+
+--
+question conditionnelle
+question image
+question matrix
+

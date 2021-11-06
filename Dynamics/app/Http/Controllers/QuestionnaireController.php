@@ -20,6 +20,7 @@ class QuestionnaireController extends Controller
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'order' => 'required',
             'image' => 'mimes:jpg,png,jpeg|max:5048'
         ]);
         if($request->hasFile('image')){
@@ -42,7 +43,8 @@ class QuestionnaireController extends Controller
                     'title' => $request->input('title'),
                     'description' => $request->input('description'),
                     'price' => $request->input('price'),
-                    'status' => "0",
+                    'order' => $request->input('order'),
+                    'status' => "3",
                     'validator' => "0",
                     'images' => $newImageName,
                     'code' => $this->generateRandomString(5)
@@ -56,7 +58,8 @@ class QuestionnaireController extends Controller
                     'title' => $request->input('title'),
                     'description' => $request->input('description'),
                     'price' => $request->input('price'),
-                    'status' => "0",
+                    'order' => $request->input('order'),
+                    'status' => "3",
                     'validator' => "0",
                     'images' => "none",
                     'code' => $this->generateRandomString(5)

@@ -39,6 +39,15 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="basic-url" class="form-label">Nom du commanditaire / Entreprise demandeuse de l'étude</label>
+                                <input type="text" class="form-control" name="order"
+                                    aria-describedby="basic-addon3">
+                                @error('order')
+                                <label for="basic-url" class="form-label alert-danger">Erreur cette section ne doit pas être vide</label>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
                                 <label for="basic-url" class="form-label">Rémunération (Nombre uniquement Ex:
                                     800)</label>
                                 <input type="text" class="form-control" name="price" aria-describedby="basic-addon3">

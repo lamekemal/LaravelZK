@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Questionnaire extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'price', 'description', 'images','user_id', 'validator', 'status','code'];
+    protected $fillable = ['title', 'price', 'description', 'images','user_id', 'validator', 'status','code','order'];
 
     public function user(){
         return $this->belongsTo(User::class);

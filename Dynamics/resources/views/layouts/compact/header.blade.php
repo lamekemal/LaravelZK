@@ -20,7 +20,7 @@
             <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i>
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"
-                class="lni lni-enter header-icon d-none d-sm-inline-block"></a>
+                class="lni lni-enter header-icon d-none d-sm-inline-block text-12">Sortir</a>
                 <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
@@ -30,8 +30,8 @@
             <div class="dropdown">
                 <div class="badge-top-container" role="button" id="dropdownNotification" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <span class="badge badge-primary">!</span>
-                    <i class="i-Bell text-muted header-icon"></i>
+                    <!--span class="badge badge-primary">!</span-->
+                    <!--i class="i-Bell text-muted header-icon"></i-->
                 </div>
                 <!-- Notification dropdown -->
                 <div class="dropdown-menu dropdown-menu-right notification-dropdown rtl-ps-none"

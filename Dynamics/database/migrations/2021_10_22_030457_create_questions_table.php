@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('questionnaire_id');
             $table->unsignedBigInteger('question_type');
+            $table->unsignedBigInteger('question_parent');
             $table->string('question');
             $table->timestamps();
         });

@@ -23,6 +23,7 @@ class CreateQuestionnairesTable extends Migration
             $table->string('validator');
             $table->string('images');
             $table->string('code');
+            $table->string('order');
             $table->timestamps();
         });
     }

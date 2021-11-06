@@ -74,7 +74,7 @@
                                                             <label for="reponse{{ $reponse->id }}">
                                                                 <li class="list-group-item">
                                                                     <input
-                                                                        name="reponses[{{ $key }}][{{ $count }}][reponse_id]"
+                                                                        name="reponses[{{ $key }}][reponses_id][{{ $count }}][reponse_id]"
                                                                         type="checkbox"
                                                                         id="reponse{{ $reponse->id }}"
                                                                         value="{{ $reponse->id }}">

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSurveyResponsesTable extends Migration
+class CreateClientDashboardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,16 @@ class CreateSurveyResponsesTable extends Migration
      */
     public function up()
     {
-        Schema::create('survey_responses', function (Blueprint $table) {
+        Schema::create('client_dashboards', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('questionnaire_id');
             $table->unsignedBigInteger('survey_id');
-            $table->unsignedBigInteger('question_id');
-            $table->unsignedBigInteger('reponse_id');
-            $table->string('reponse_text');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('questionnaire_title');
+            $table->string('status');
+            $table->string('price');
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ class CreateSurveyResponsesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('survey_responses');
+        Schema::dropIfExists('client_dashboards');
     }
 }

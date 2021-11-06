@@ -34,7 +34,8 @@ class QuestionController extends Controller
         ]);
         $questionnaire->questions()->create([
             'question' => request()->input('question.question'),
-            'question_type' => request()->input('question_type')
+            'question_type' => request()->input('question_type'),
+            'question_parent' => "0"
         ]);
 
         return redirect('/Questionnaires/'.$questionnaire->code);
@@ -49,7 +50,8 @@ class QuestionController extends Controller
         ]);
         $question = $questionnaire->questions()->create([
             'question' => request()->input('question.question'),
-            'question_type' => request()->input('question_type')
+            'question_type' => request()->input('question_type'),
+            'question_parent' => "0"
         ]);
         $question->reponses()->createMany(request()['reponses']);
 
@@ -65,8 +67,10 @@ class QuestionController extends Controller
         ]);
         $question = $questionnaire->questions()->create([
             'question' => request()->input('question.question'),
-            'question_type' => request()->input('question_type')
+            'question_type' => request()->input('question_type'),
+            'question_parent' => "0"
         ]);
+        //dd(request()['reponses']);
         $question->reponses()->createMany(request()['reponses']);
 
         return redirect('/Questionnaires/'.$questionnaire->code);
