@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ClientDashboard;
 use App\Models\Reponse;
 use App\Models\Question;
 use Illuminate\Http\Request;
@@ -10,7 +11,6 @@ use App\Models\SurveyResponse;
 
 class SurveyController extends Controller
 {
-
     public function show($code){
         $questionnaire = Questionnaire::where('code', $code)->first();
         if (!empty($questionnaire)) {
@@ -24,9 +24,31 @@ class SurveyController extends Controller
 
 
     public function store($code){
+        //get base data
         $questionnaire = Questionnaire::where('code', $code)->first();
         $data = request();
         $survey = $questionnaire->surveys()->create($data['contacts']);
+        //Get dashboard info and Save
+        $questionnaire_id =  $questionnaire->id;
+        $survey_id =  $survey->id;
+        $questionnaire_title =  $questionnaire->title;
+        $email = $survey->email;
+        $phone = $survey->phone;
+        $userSurveyExist_bool= ClientDashboard::where('questionnaire_id', $questionnaire_id)
+                                              ->where('email',$email )->orWhere('phone',$phone)->first();
+        if(empty($userSurveyExist_bool)){
+            ClientDashboard::create([
+                'questionnaire_id' => $questionnaire_id,
+                'survey_id' => $survey_id,
+                'name' => $survey->name,
+                'email' => $email,
+                'phone' => $phone,
+                'questionnaire_title' => $questionnaire_title,
+                'status' => "1",
+                'price' => $questionnaire->price
+            ]);
+        }
+        //save on Survey Table
         foreach ($data['reponses']  as  $value) {
             $question= Question::where('id',$value['question_id'])->first();
             if( $question->question_type ==0){

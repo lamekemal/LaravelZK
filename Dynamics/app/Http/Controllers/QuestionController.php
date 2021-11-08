@@ -7,23 +7,43 @@ use App\Models\Questionnaire;
 
 class QuestionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth',['except' => ['']]);
+    }
+
     public function create($code){
-        $questionnaire = Questionnaire::where('code', $code)->first();
-        //dd($questionnaire);
-        return view('question.create')
-            ->with('questionnaire', $questionnaire);
+        $user = auth()->user();
+        if ($user->user_type == 1){
+            $questionnaire = Questionnaire::where('code', $code)->first();
+            //dd($questionnaire);
+            return view('question.create')
+                ->with('questionnaire', $questionnaire);
+        }else{
+            return redirect('/');
+        }
     }
 
     public function createQcu($code){
-        $questionnaire = Questionnaire::where('code', $code)->first();
-        return view('question.create-qcu')
-            ->with('questionnaire', $questionnaire);
+        $user = auth()->user();
+        if ($user->user_type == 1){
+            $questionnaire = Questionnaire::where('code', $code)->first();
+            return view('question.create-qcu')
+                ->with('questionnaire', $questionnaire);
+        }else{
+            return redirect('/');
+        }
     }
 
     public function createQcm($code){
-        $questionnaire = Questionnaire::where('code', $code)->first();
-        return view('question.create-qcm')
-            ->with('questionnaire', $questionnaire);
+        $user = auth()->user();
+        if ($user->user_type == 1){
+            $questionnaire = Questionnaire::where('code', $code)->first();
+            return view('question.create-qcm')
+                ->with('questionnaire', $questionnaire);
+        }else{
+            return redirect('/');
+        }
     }
 
     public function store($code){

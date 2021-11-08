@@ -45,81 +45,8 @@
 
             </div>
         </div>
-        <!-- Pre Loader end  -->
 
-
-
-
-
-
-
-        <!-- ============ Compact Layout start ============= -->
-        @if ($layout == 'compact')
-
-        @include('layouts.compact-vertical-sidebar.master')
-
-
-
-        <!-- ============ Compact Layout End ============= -->
-
-
-
-
-
-        <!-- ============ Horizontal Layout start ============= -->
-
-        @elseif($layout=="horizontal")
-
-
-        @include('layouts.horizontal-bar.master')
-
-
-        <!-- ============ Horizontal Layout End ============= -->
-
-
-
-
-        <!-- ============ Vetical SIdebar Layout start ============= -->
-        @elseif($layout=="vertical")
-
-        @include('layouts.vertical-sidebar.master')
-
-        <!-- ============ Vetical SIdebar Layout End ============= -->
-
-
-
-
-        <!-- ============ Large SIdebar Layout start ============= -->
-        @elseif($layout=="normal")
-
-
-        @include('layouts.large-vertical-sidebar.master')
-
-
-        <!-- ============ Large Sidebar Layout End ============= -->
-
-
-
-
-
-        @else
-        <!-- ============Deafult  Large SIdebar Layout start ============= -->
-
-        @include('layouts.compact-vertical-sidebar.master')
-
-
-        <!-- ============ Large Sidebar Layout End ============= -->
-
-
-
-        @endif
-        <!-- ============ Search UI Start ============= -->
-        {{-- @include('layouts.search') --}}
-        <!-- ============ Search UI End ============= -->
-
-        <!-- ============ Customizer UI Start ============= -->
-        @include('layouts.common.customizer')
-        <!-- ============ Customizer UI Start ============= -->
+        @include('layouts.client-layouts.master')
 
 
 

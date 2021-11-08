@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class QuestionnaireController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth',['except' => ['']]);
+    }
+
     public function create()
     {
         session(['layout' => 'compact']);
@@ -71,7 +76,6 @@ class QuestionnaireController extends Controller
 
     public function show($code)
     {
-
         $questionnaire = Questionnaire::where('code', $code)->first();
         $questionnaire->load('questions.reponses');
 

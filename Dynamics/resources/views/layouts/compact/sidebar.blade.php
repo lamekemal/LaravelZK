@@ -72,9 +72,18 @@
                 </li>
                 <li class="nav-item">
                     <a class="{{ Route::currentRouteName()=='dashboard_version_4' ? 'open' : '' }}"
-                        href="{{route('dashboard_version_4')}}">
+                        href="">
 
                         <span class="item-name">Validation des paiements</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="childNav" data-parent="dashboard">
+                <li class="nav-item">
+                    <a href="/Dashboard/Utilisateur"
+                        class="{{ Route::currentRouteName()=='dashboard_version_2' ? 'open' : '' }}">
+
+                        <span class="item-name">Gestion des utilisateurs</span>
                     </a>
                 </li>
             </ul>

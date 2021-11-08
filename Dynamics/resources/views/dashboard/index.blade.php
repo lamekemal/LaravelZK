@@ -1,4 +1,5 @@
 @extends('layouts.masterx')
+@section('title', 'Tableau de bord Administrateur ZK Consulting')
 @section('main-content')
 
     <div class="breadcrumb">

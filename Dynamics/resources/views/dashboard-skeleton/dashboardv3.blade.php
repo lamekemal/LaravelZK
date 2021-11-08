@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.masterc')
 @section('main-content')
     <div class="breadcrumb">
                 <h1>Version 3</h1>
@@ -157,24 +157,6 @@
 
                         <div class="col-md-6 col-sm-6">
                             <div class="card bg-dark text-white o-hidden mb-4">
-                                <img class="card-img" src="{{asset('assets/images/photo-long-1.jpg')}}" alt="Card image">
-                                <div class="card-img-overlay">
-                                    <div class="text-center pt-4">
-                                        <h5 class="card-title mb-2 text-white">Card title</h5>
-                                        <div class="separator border-top mb-2"></div>
-                                        <p class="text-small font-italic">Last updated 3 mins ago</p>
-                                    </div>
-                                    <div class="p-1 text-left card-footer font-weight-light d-flex">
-                                        <span class="mr-3 d-flex align-items-center"><i class="i-Speach-Bubble-6 mr-1"></i>
-                                            12 </span>
-                                        <span class="d-flex align-items-center"><i class="i-Calendar-4 mr-2"></i>03.12.2018</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-6">
-                            <div class="card bg-dark text-white o-hidden mb-4">
                                 <img class="card-img" src="{{asset('assets/images/photo-long-2.jpg')}}" alt="Card image">
                                 <div class="card-img-overlay">
                                     <div class="text-center pt-4">
@@ -190,42 +172,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <h6 class="mb-0 text-muted">Subscription/Registration</h6>
-                                    <p class="text-24 font-weight-light mb-1">20/80</p>
-                                    <div id="echart1" style="height: 140px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="mb-0 text-muted">Project Running/Completed</h6>
-                                    <p class="text-24 font-weight-light mb-1">40/60</p>
-                                    <div id="echart2" style="height: 140px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <h6 class="mb-2">Last 7 days traffic status</h6>
-                                    <p class="text-24 font-weight-light mb-1"><i class="i-Up text-success"></i> 15%</p>
-                                    <div id="echart3" style="height: 60px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <h6 class="mb-2">Server failures</h6>
-                                    <p class="text-24 font-weight-light mb-1"><i class="i-Down text-danger"></i> 5%</p>
-                                    <div id="echart4" style="height: 60px;"></div>
-                                </div>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>

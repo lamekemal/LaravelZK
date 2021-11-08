@@ -7,6 +7,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuestionnaireController;
 use AidynMakhataev\LaravelSurveyJs\app\Models\Survey;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ClientDashController;
 
 Route::get('large-sidebar/dashboard/dashboard1', function () {
     // set layout sesion(key)
@@ -29,10 +30,10 @@ Route::get('vertical/dashboard/dashboard1', function () {
 Route::get('resizeImage', [ImageController::class, 'resizeImage']);
 Route::post('resizeImagePost', [ImageController::class, 'resizeImagePost'])->name('resizeImagePost');
 
-Route::view('dashboard/dashboard1', 'dashboard.dashboardv1')->name('dashboard_version_1');
-Route::view('dashboard/dashboard2', 'dashboard.dashboardv2')->name('dashboard_version_2');
-Route::view('dashboard/dashboard3', 'dashboard.dashboardv3')->name('dashboard_version_3');
-Route::view('dashboard/dashboard4', 'dashboard.dashboardv4')->name('dashboard_version_4');
+Route::view('dashboard/dashboard1', 'dashboard-skeleton.dashboardv1')->name('dashboard_version_1');
+Route::view('dashboard/dashboard2', 'dashboard-skeleton.dashboardv2')->name('dashboard_version_2');
+Route::view('dashboard/dashboard3', 'dashboard-skeleton.dashboardv3')->name('dashboard_version_3');
+Route::view('dashboard/dashboard4', 'dashboard-skeleton.dashboardv4')->name('dashboard_version_4');
 
 // uiKits
 Route::view('uikits/alerts', 'uiKits.alerts')->name('alerts');
@@ -151,6 +152,7 @@ Route::post('/Survey/{code}', [SurveyController::class, 'store']);
 Route::get('/Dashboard', [DashboardController::class, 'index'])->name('compact');
 Route::get('/DashboardQuestionnaire', [DashboardController::class, 'listQuestionnaire']);
 Route::get('/DashboardQuestionnaire/{code}/delete', [DashboardController::class, 'deleteQuestionnaire']);
+Route::get('/Dashboard-client', [ClientDashController::class, 'index']);
 
 Auth::routes();
 
