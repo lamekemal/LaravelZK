@@ -103,4 +103,12 @@ class SurveyController extends Controller
         return view('survey.merci' )
         ->with('questionnaire', $questionnaire);;
     }
+
+    public function koboshow(){
+
+        $url = "https://ee.humanitarianresponse.info/x/htSqbuBE";
+        //redirect()->away(
+
+        return redirect()->intended($url);
+    }
 }

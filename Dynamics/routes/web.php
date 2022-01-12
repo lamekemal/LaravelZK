@@ -8,6 +8,7 @@ use App\Http\Controllers\QuestionnaireController;
 use AidynMakhataev\LaravelSurveyJs\app\Models\Survey;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ClientDashController;
+use App\Http\Controllers\OpenformationController;
 
 Route::get('large-sidebar/dashboard/dashboard1', function () {
     // set layout sesion(key)
@@ -153,7 +154,11 @@ Route::get('/Dashboard', [DashboardController::class, 'index'])->name('compact')
 Route::get('/DashboardQuestionnaire', [DashboardController::class, 'listQuestionnaire']);
 Route::get('/DashboardQuestionnaire/{code}/delete', [DashboardController::class, 'deleteQuestionnaire']);
 Route::get('/Dashboard-client', [ClientDashController::class, 'index']);
-
+Route::get('/Royalsurvey/survbl35v', [SurveyController::class, 'koboshow']);
 Auth::routes();
+
+Route::get('/Dashboard/formation-libre', [OpenformationController::class, 'dashboard'])->name('compact');
+Route::get('/Dashboard/create-oforma', [OpenformationController::class, 'create']);
+Route::resource('/Publication', OpenformationController::class);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

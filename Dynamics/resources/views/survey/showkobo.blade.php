@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,18 +16,24 @@
         style="background-image: url({{ asset('assets/images/bg-survey.jpg') }}); background-repeat: no-repeat; background-attachment: fixed;">
         <div class="row justify-content-between">
             <div class="col auth-content pt-6 mb-4" style="margin-top: 5em;">
-                <div class="card o-hidden">
-                    <div class="m-6 col-md-12" style="width:100% ! important">
-                        <div class="p-4">
-                            <h1 class="mb-3 text-35 text-center bold" style="color: #0047ab">
-                                MERCI</h1>
-                            <h1 class="mb-3 text-18 text-center bold">Merci pour vos réponses, après étude du formulaire
-                                vous recevrai un mail de confirmation et s'il s'agit d'un formulaire rémunérer, votre compte
-                                ZK-CONSULTING sera crédité </h1>
-                            <a href="/" class="btnbtn-outline-secondary btn-block mt-2" style="width: 100%">Accueil</a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+
+                    $doc = new DOMDocument;
+                   // libxml_use_internal_errors(true);
+                    $doc->preserveWhiteSpace = false;
+                    $doc->strictErrorChecking = false;
+                    $doc->recover = true;
+
+                    $doc->loadHTMLFile("https://ee.kobotoolbox.org/x/9CyUd95T", LIBXML_NOWARNING);
+
+                    $xpath = new DOMXPath($doc);
+
+                    $query = "//div[@class='main']";
+
+                    $entries = $xpath->query($query);
+                    var_dump($entries->item(0)->textContent);
+
+                    ?>
             </div>
             <div class="col-4">
                 <div class="fixed-top ml-3 mr-5" style="max-width: 230px ! important; margin-top: 5em;">
@@ -38,6 +42,8 @@
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">ESPACE PUBLICITAIRE</h5>
                             </div>
+                            <p class="mb-1">Formulaire rémunéré a hauteur de  F
+                                CFA</small>
                                 <a href="#"
                                     class="list-group-item list-group-item-action flex-column align-items-start"><s></s>
                                     <img src="{{ asset('assets/images/pub.jpg') }}" alt="yoast seo" height="300"

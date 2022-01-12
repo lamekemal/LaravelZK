@@ -27,7 +27,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                             <div class="dropdown-header">
-                                <i class="i-Lock-User mr-1"></i> Timothy Carlson
+                                <i class="i-Lock-User mr-1"></i> {{ $userdata->name }}
                             </div>
                             <a class="dropdown-item"
                             onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">Deconnexion</a>
