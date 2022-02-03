@@ -1,10 +1,17 @@
-require('./bootstrap');
-require('alpinejs');
-require('jquery');
-
+require("./bootstrap");
+require("alpinejs");
+require("jquery");
+import "./libs/trix.js";
 var countreponseid = 0;
-  $( "#addreponse" ).on( "click", function() {
-    $('#reponsemaster').append(
-        '<div class="form-group"><label for="reponse">Réponse suggérer</label><input id="reponse'+countreponseid+'" aria-placeholder="reponseHelp" placeholder="Reponse aux choix" name="reponses['+countreponseid+'][reponse]"type="text" class="form-control" aria-describedby="reponseHelp"><input class="hidden" id="reponse_type" name="reponses['+countreponseid+'][reponse_type]" value="1" type="number" hidden></div>'
-        );countreponseid++;
-  });
+$("#addreponse").on("click", function () {
+    $("#reponsemaster").append(
+        '<div class="form-group"><label for="reponse">Réponse suggérer</label><input id="reponse' +
+            countreponseid +
+            '" aria-placeholder="reponseHelp" placeholder="Reponse aux choix" name="reponses[' +
+            countreponseid +
+            '][reponse]"type="text" class="form-control" aria-describedby="reponseHelp"><input class="hidden" id="reponse_type" name="reponses[' +
+            countreponseid +
+            '][reponse_type]" value="1" type="number" hidden></div>'
+    );
+    countreponseid++;
+});

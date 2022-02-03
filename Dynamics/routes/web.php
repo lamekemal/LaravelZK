@@ -9,6 +9,7 @@ use AidynMakhataev\LaravelSurveyJs\app\Models\Survey;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ClientDashController;
 use App\Http\Controllers\OpenformationController;
+use App\Http\Controllers\PostController;
 
 Route::get('large-sidebar/dashboard/dashboard1', function () {
     // set layout sesion(key)
@@ -160,5 +161,9 @@ Auth::routes();
 Route::get('/Dashboard/formation-libre', [OpenformationController::class, 'dashboard'])->name('compact');
 Route::get('/Dashboard/create-oforma', [OpenformationController::class, 'create']);
 Route::resource('/Publication', OpenformationController::class);
+
+Route::get('/Dashboard/blog', [PostController::class, 'dashboard'])->name('compact');
+Route::get('/Dashboard/create-blog', [PostController::class, 'create']);
+Route::resource('/Blog', PostController::class);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

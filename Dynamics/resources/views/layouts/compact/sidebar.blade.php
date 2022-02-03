@@ -39,7 +39,7 @@
         <i class="sidebar-close i-Close" (click)="toggelSidebar()"></i>
         <header>
             <div class="logo">
-                <img src="{{ asset('assets/images/logo-text.png') }}" alt=""
+                <img src="{{ asset('assets/images/logo-zk.png') }}" alt=""
                     style="width: 100% !important; height: auto;">
             </div>
         </header>
@@ -112,8 +112,8 @@
                 <div class="logo">
                     <i class="fas fa-user-cog"></i>
                 </div>
-                <h6>Formation Zk</h6>
-                <p>Gestion des formations et utilisateurs</p>
+                <h6>Blog & Formation Zk</h6>
+                <p>Gestion des formations, blog et utilisateurs</p>
             </header>
             <ul class="childNav" data-parent="sessions">
                 <li class="nav-item">
@@ -131,9 +131,9 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Dashboard/"
+                    <a href="/Dashboard/blog"
                         class="{{ Route::currentRouteName() == 'dashboard_version_2' ? 'open' : '' }}">
-                        <span class="item-name">Gestion des formations</span>
+                        <span class="item-name">Gestion des Blogs</span>
                     </a>
                 </li>
             </ul>

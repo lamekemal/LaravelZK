@@ -7,11 +7,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Tonysm\RichTextLaravel\Attachables\AttachableContract;
+use Tonysm\RichTextLaravel\Attachables\Attachable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements AttachableContract
 {
     use HasApiTokens, HasFactory, Notifiable;
+    use Attachable;
 
+    public function richTextRender(array $options = []): string
+    {
+        return view('users._mention', [
+            'user' => $this,
+        ])->render();
+    }
     /**
      * The attributes that are mass assignable.
      *
