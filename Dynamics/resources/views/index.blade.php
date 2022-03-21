@@ -56,7 +56,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="/" class="active">Accueil</a></li>
-                    <li class="dropdown">
+                    <li class="dropdown">                                                                                                                          
                         <a href="/#about"><span>Qui sommes-nous?</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="/#about">A-propos</a></li>
@@ -70,10 +70,10 @@
                         <a href="/#faq"><span>ZK Solutions</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="/">RoyalSurey</a></li>
-                            <li><a href="https://eticket-africa.com/">E-Tiket Africa</a></li>
+                            <li><a href="https://eticket-africa.com/">E-Ticket Africa </a><li>
                         </ul>
                     </li>
-                    <li><a href="/Blog">Blog</a></li>
+                    <li><a href="/Blog">Blog</></li>
 
                     <li><a href="/Contact">Contact</a></li>
                     <li><a href="/Dashboard" class="getstarted">Compte ZK</a></li>
