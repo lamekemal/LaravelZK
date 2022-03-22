@@ -97,7 +97,7 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">
-                                ZK Consulting <span>votre solution pour le Digital</span>
+                                ZK Consulting, <span>expert en solution Digital</span>
                             </h2>
                             <!--p class="animate__animated animate__fadeInUp">
                   Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
@@ -118,7 +118,7 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">
-                                ZK Consulting <span>votre solution pour le Digital</span>
+                                ZK Consulting, <span>analyse des données</span>
                             </h2>
                             <!--p class="animate__animated animate__fadeInUp">
                   Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
@@ -139,7 +139,28 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">
-                                ZK Consulting <span>votre solution pour le Digital</span>
+                                 <span>Faites vos études de marché et enquêtes de satisfaction de se clientèle
+                                 chez nous</span>
+                            </h2>
+                            <!--p class="animate__animated animate__fadeInUp">
+                  Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
+                  et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
+                  mollitia ut. Similique ea voluptatem. Esse doloremque
+                  accusamus repellendus deleniti vel. Minus et tempore modi
+                  architecto.
+                </p>-->
+                            <a href="#about"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTACTEZ-NOUS</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item"
+                    style="background-image: url({{ asset('assetsx/img/slide/slide-3.jpg') }})">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">
+                                 <span>Faites vos formation de qualités dans nos locaux </span>
                             </h2>
                             <!--p class="animate__animated animate__fadeInUp">
                   Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
