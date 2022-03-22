@@ -202,8 +202,10 @@
                     <div class="col-lg-6 pt-4 pt-lg-0">
                         <p>
                             ZK CONSULTING est un cabinet d'expertise statistique qui possède
-                            une équipe d'analyste expert en sciences des données au service
-                            de la prise de décision et de l'action.
+                            une équipe d'analyste expert en sciences des données et en développement digital au service
+                            de la prise de décision et de l'action.</br>
+                            Elle effectue des études de marché et des enquêtes de satisfactions des sa clientèle
+                            pour le publique comme pour le privé.
                         </p>
                         <p>
                             A partir d’un examen approfondi de votre projet, nous
